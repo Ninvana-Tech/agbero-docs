@@ -1,0 +1,754 @@
+{
+	"info": {
+		"_postman_id": "ea7f73f5-5f82-43d5-b532-f8b14db4bb00",
+		"name": "Agbero API",
+		"description": "Agbero Testing APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22650667",
+		"_collection_link": "https://hoddy-inc.postman.co/workspace/Hoddy's-Workspace~237336a5-db20-4c35-80aa-b3dc950745cd/collection/26977965-ea7f73f5-5f82-43d5-b532-f8b14db4bb00?action=share&source=collection_link&creator=22650667"
+	},
+	"item": [
+		{
+			"name": "Merchant",
+			"item": [
+				{
+					"name": "Create Merchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"odunmilade@gmail.com\",\n    \"password\": \"whiteman@5\",\n    \"name\": \"Hody INC\",\n    \"contact\": \"08089040350\",\n    \"address\": \"Test Address\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_base_url}}/api/v1/merchant/create",
+							"host": [
+								"{{api_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Merchant",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola@gmail.com\",\n    \"password\": \"Prayer1020!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/merchant/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Merchants Driver",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDk1ODBlNzM1OTczY2YxMWEzZjdmMyIsImlhdCI6MTcyODY3MDY1MywiZXhwIjozNDg4MjA2NjUzfQ.lSiDAu2ov8xPC4W9mRFMexPHSxVK6_MRJesYQIJjJlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/merchant/drivers",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"drivers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Merchants User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDk1ODBlNzM1OTczY2YxMWEzZjdmMyIsImlhdCI6MTcyODY3MDY1MywiZXhwIjozNDg4MjA2NjUzfQ.lSiDAu2ov8xPC4W9mRFMexPHSxVK6_MRJesYQIJjJlI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/merchant/users",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Confirm Payment",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"tripId\": \"67112e9c1fe929c1491c9f16\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/merchant/trip/confirm",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"merchant",
+								"trip",
+								"confirm"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Driver",
+			"item": [
+				{
+					"name": "Create Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"odunmilad@gmail.com\",\n    \"firstName\": \"Merchant\",\n    \"lastName\": \"Driver\",\n    \"license\": \"https://ng.jumia.is/unsafe/fit-in/300x300/filters:fill(white)/product/66/6375363/1.jpg?6069\",\n    \"merchant\": \"MBEO0FK0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api_base_url}}/api/v1/driver/create",
+							"host": [
+								"{{api_base_url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Driver",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+1@gmail.com\",\n    \"password\": \"Prayer1020!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/login",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Information",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDk0ZDc0ZDdhNmFkZTVjMGUyOGZjYSIsImlhdCI6MTcyODY2Mjk1OSwiZXhwIjozNDg4MTk4OTU5fQ.NreBjRH4lPf97kf_Q6zQPXb3L9LCMVjqG3HTHIFCVfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vehicleInfo\": [\n        {\n            \"manufacturer\": \"Toyota\",\n            \"year\": 2023,\n            \"plateNumber\": \"AAA-123-423\",\n            \"color\": \"red\",\n            \"exteriorPhoto\": \"String\",\n            \"interiorPhoto\": \"String\",\n            \"numberOfSeats\": 10\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/update/vehicle",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"update",
+								"vehicle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driver Accept Trip",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY3MDk0ZDc0ZDdhNmFkZTVjMGUyOGZjYSIsImlhdCI6MTcyODY2Mjk1OSwiZXhwIjozNDg4MTk4OTU5fQ.NreBjRH4lPf97kf_Q6zQPXb3L9LCMVjqG3HTHIFCVfk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/trip/accept/670953593a8b027bf09568d0",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"trip",
+								"accept",
+								"670953593a8b027bf09568d0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driver Reject Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/trip/reject/66b7c194f03f04cb5cb78a36",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"trip",
+								"reject",
+								"66b7c194f03f04cb5cb78a36"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Arrive Pick Up",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/trip/arrive-pickup/6640a92ac082e33d250efdb4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"trip",
+								"arrive-pickup",
+								"6640a92ac082e33d250efdb4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Trip",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/driver/trip/start/6640ad0778ce8141997b09a4",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"trip",
+								"start",
+								"6640ad0778ce8141997b09a4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "End Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"tripPrice\": 2000   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/api/v1/driver/trip/end/66ba175559fca47e715db007",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"driver",
+								"trip",
+								"end",
+								"66ba175559fca47e715db007"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+9@gmail.com\",\n    \"fullName\": \"Popoola Sinaayo\",\n    \"merchant\": \"0AH0JQ5G\",\n    \"phoneNumber\": \"08129304063\",\n    \"profilePicture\": \"www.google.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/create",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Request Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+4@gmail.com\",\n    \"driverId\": \"67095a341a3f30e36b05b00d\",\n    \"requestLocation\": \"Epe, Lagos\",\n    \"originState\": \"Lagos\",\n    \"pickUpLocation\": {\n        \"latitude\": 21.53,\n        \"longitude\": 62.73,\n        \"description\": \"A very local place again\"\n    },\n    \"dropOffLocation\": {\n       \"latitude\": 20.23,\n        \"longitude\": 40.23,\n        \"description\": \"A very local place destination\"  \n    },\n    \"distanceToPickup\": 123,\n    \"basePrice\": 100,\n    \"durationToPickup\": 123,\n    \"tripDistance\": 123,\n    \"tripDuration\": 10\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/request/trip?API_KEY=474c30df-57e3-4425-928f-18e491445886",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"request",
+								"trip"
+							],
+							"query": [
+								{
+									"key": "API_KEY",
+									"value": "474c30df-57e3-4425-928f-18e491445886"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Trip Driver",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"driverId\": \"6640a6f6661cd834734de86b\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/update/trip/driver/:tripId",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update",
+								"trip",
+								"driver",
+								":tripId"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "67336790bc412fcaeae3be5b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cancel Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+4@gmail.com\",\n    \"tripId\": \"670ffdd02c9ab137ee5109cd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/cancel/trip",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"cancel",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User Info",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+7@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All User's Trip",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+4@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/trip",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"trip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Trip",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "474c30df-57e3-4425-928f-18e491445886",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"sinaayopopoola+4@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/user/trip/:tripId",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"trip",
+								":tripId"
+							],
+							"variable": [
+								{
+									"key": "tripId",
+									"value": "670ffdd02c9ab137ee5109cd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_base_url",
+			"value": "https://agbero-api.onrender.com",
+			"type": "string"
+		}
+	]
+}
