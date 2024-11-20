@@ -1,6 +1,6 @@
 {
-  "label": "Passenger - Extras",
-  "position": 3,
+  "label": "Passenger Management",
+  "position": 2,
   "link": {
     "type": "generated-index"
   }

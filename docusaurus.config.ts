@@ -56,18 +56,12 @@ const config: Config = {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "My Site",
+      title: "agbero Documentation",
       logo: {
         alt: "My Site Logo",
         src: "img/logo.svg",
       },
       items: [
-        {
-          type: "docSidebar",
-          sidebarId: "tutorialSidebar",
-          position: "left",
-          label: "Tutorial",
-        },
         {
           href: "https://github.com/Ninvana-Tech/agbero-docs",
           label: "GitHub",
