@@ -39,7 +39,7 @@ const config: Config = {
           routeBasePath: "/",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/Ninvana-Tech/agbero-docs",
+          editUrl: "https://github.com/Ninvana-Tech/agbero-docs/tree/main",
         },
         blog: false,
         theme: {
