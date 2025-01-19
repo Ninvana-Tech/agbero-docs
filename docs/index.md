@@ -50,18 +50,20 @@ https://widget-sandbox.agbero.com.ng
 https://apisandbox.agbero.com.ng
 ```
 
+You can also download a Demo app that connects to the sandbox widget [here](https://drive.google.com/file/d/1-dEJOW1xkqvoDKuTyteTDjdYOUfXdFC-/view?usp=sharing)
+
 :::caution Caution
 
 The sandbox environment is designed for testing purposes only. It mirrors the production environment but does not affect real data.
 Ensure you replace the URLs appropriately when switching between testing and production environments.
 :::
 
-## Merchant Onboarding
+<!-- ## Merchant Onboarding
 
 To get started, you need to register as a merchant on the Agbero platform and obtain your API key. This API key will be used to authenticate your requests.
 
 - Go to the [agbero Merchant Portal](https://merchant.agbero.com.ng) to create an account.
-- After registration, you will receive an API key that you can use to interact with the agbero system.
+- After registration, you will receive an API key that you can use to interact with the agbero system. -->
 
 ## Integration Steps
 
@@ -141,6 +143,20 @@ Merchants must provide a webhook endpoint to receive updates on trip statuses. A
 
 **Webhook Payload Example:**
 
+When a trip is created, we return a trip ID
+
+```json
+{
+  "reference": "reference-provided-by-the-merchant",
+  "event": "TRIP_CREATED",
+  "data": {
+    "trip_id": "1234-5678-91039",
+    "user_email": "user@example.com",
+    "driver_id": "1233-4R456-56565-5656"
+  }
+}
+```
+
 Or for a completed trip
 
 ```json
@@ -187,7 +203,7 @@ Drivers can donwload the agbero Driver app which is available on the Play Store.
 
 **Download the app from**: [Google Play Store - Agbero Driver App](https://play.google.com/store/apps/details?id=com.agbero.driver)
 
-**Note**: For testing purposes, download the test driver app which connects to the sandbox environment [from this link](https://play.google.com/store/apps/details?id=com.agbero.driver)
+<!--   -->
 
 ### Driver Authentication
 
