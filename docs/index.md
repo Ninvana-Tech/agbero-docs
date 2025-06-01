@@ -249,8 +249,6 @@ curl -X POST https://apisandbox.agbero.com.ng/api/v1/driver/create \
 
 #### Example Driver Signup Response
 
-You can use the API to update am existing driver programmatically. All fields except "id" is optional
-
 ```json
 {
   "success": true,
@@ -284,6 +282,8 @@ You can use the API to update am existing driver programmatically. All fields ex
 ```
 
 #### Updating an existing driver
+
+You can use the API to update am existing driver programmatically. All fields except "id" is optional
 
 ```bash
 curl -X PATCH https://apisandbox.agbero.com.ng/api/v1/driver/update \
